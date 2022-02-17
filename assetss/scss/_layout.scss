@@ -1,0 +1,331 @@
+// layout
+
+.container {
+    max-width: 144rem;
+    padding: 0 5rem;
+    margin: 0 auto;
+    position: relative;
+
+    @include mq(m) {
+        padding: 0 2rem;
+
+    }
+}
+
+.blog__container {
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.row {
+    max-width: 128rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    position: relative;
+}
+
+
+.row--1 {
+    @extend .row;
+}
+
+
+//blogpost, prints, image about
+.row--3 {
+    @extend .row;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include mq(m) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include mq(s) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
+
+
+
+//about gallery
+.row--3--1 {
+    @include mq(m) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @include mq(s) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
+
+
+//service cards
+.row--3--2 {
+    @include mq(m) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
+
+
+
+
+//cards, heropage
+
+.row--2 {
+    @extend .row;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @include mq(m) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
+
+
+//prints
+
+.row--2--1 {
+    @include mq(ml) {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        gap: 2rem;
+    }
+
+    @include mq(m) {
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 2rem;
+    }
+
+}
+
+
+//footer post // service img
+
+.row--4 {
+    @extend .row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+
+    @include mq(m) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include mq(s) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+
+
+//services gallery
+.row--7 {
+    @extend .row;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    @include mq(s) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    color: $baseheading;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+
+// logo
+%logo {
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+
+// heading
+
+.heading__center {
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include mq(s) {
+        padding: 0;
+    }
+
+    &__title {
+        font-size: $h2;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: $baseheading;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            border-top: 1rem solid $primary;
+            width: 10rem;
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &__subtitle {
+        font-size: $basetext;
+    }
+}
+
+
+.heading__left {
+    position: relative;
+
+    &__title {
+
+        margin-bottom: 3rem;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            border-top: 1rem solid $primary;
+            width: 10rem;
+            position: absolute;
+            top: -2rem;
+
+        }
+    }
+}
+
+
+
+
+
+// buttons
+
+.btn {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1.3rem 2.3rem;
+    border-radius: .7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+
+    &--solid {
+        color: $linkcolor;
+        background-color: $primary;
+
+        &:hover {
+            background-color: $secondary;
+
+
+        }
+    }
+
+    &--outline {
+        border: solid .2rem $primary;
+        background-color: transparent;
+        color: $primary;
+
+        &:hover {
+            border: solid 0.2rem $baseheading;
+            color: $linkcolor;
+            background-color: $baseheading;
+        }
+    }
+
+    &--small {
+        color: $primary;
+        text-transform: none;
+        font-size: 1.3rem;
+        background-color: transparent;
+        border: solid .2rem $primary;
+        border-radius: .4rem;
+        padding: .7rem 1rem;
+
+        &:hover {
+            color: $linkcolor;
+            background-color: $baseheading;
+            border: solid .1rem $baseheading;
+        }
+    }
+}
+
+
+.cta {
+    width: 100%;
+    margin: 7rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+//padding // margin
+
+
+.pt--50 {
+    padding-top: 5rem;
+}
+
+.pt--70 {
+    padding-top: 7rem;
+}
+
+.pt--100 {
+    padding-top: 10rem;
+}
+
+.pb--50 {
+    padding-bottom: 5rem;
+}
+
+.pb--70 {
+    padding-bottom: 7rem;
+}
+
+.pb--100 {
+    padding-bottom: 10rem;
+}
+
+
+// cards
+
+.bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
