@@ -1,11 +1,11 @@
-assets/node_modules
-assets/gulpfile.js
-assets/node_modules
-assets/Readme.md
-assets/package.json
-assets/package-lock.json
-assets/.gitignore
-assets/*.html
+assetss/node_modules
+assetss/gulpfile.js
+assetss/node_modules
+assetss/Readme.md
+assetss/package.json
+assetss/package-lock.json
+assetss/.gitignore
+assetss/*.html
 .DS_Store
 
 
