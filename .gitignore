@@ -5,7 +5,7 @@ assetss/Readme.md
 assetss/package.json
 assetss/package-lock.json
 assetss/.gitignore
-assetss/*.html
+assetss/*html
 .DS_Store
 
 
