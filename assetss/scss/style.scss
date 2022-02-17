@@ -1,0 +1,505 @@
+@import 'variable';
+@import 'mixin';
+@import 'layout';
+@import 'navigation';
+@import 'blogpage';
+@import 'page';
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $fontbase;
+    background: $bgcolor;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $basetext;
+}
+
+p {
+    line-height: $text-line-height;
+}
+
+a {
+    text-decoration: none;
+    @include linx($linkcolor, $primary, $secondary, $primary)
+}
+
+button {
+    border-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+@include selection($linkcolor, $primary);
+
+
+
+
+/////////// hero baner //////////////
+
+
+.header {
+    background-image: $gradient, url(../img/herobaner.jpg);
+    @extend .bg-image;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    &__heading {
+        font-size: $h1;
+        font-weight: 700;
+        color: $linkcolor;
+        @include mq(s) {
+           font-size: 5.5rem;
+        }
+    }
+
+    &__img {
+        margin-top: 3rem;
+        width: 10rem;
+
+    }
+}
+
+
+
+.cta__post {
+    @extend .cta;
+    padding: 10rem 0;
+    background-image: url(../img/logotravel.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60rem;
+    @include mq(s) {
+        background-size: contain;
+        background-position: top;
+        padding: 3rem 0;
+
+     }
+}
+
+
+
+.cta__button {
+    @extend .cta;
+}
+
+
+/////////// cards //////////////
+
+.cards {
+    background-color: $baseheading;
+    position: relative;
+
+    .heading__center__title,
+    .heading__center__subtitle {
+        color: $linkcolor;
+    }
+
+    &__content {
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    &__layer {
+        position: absolute;
+        background-color: $baseheading;
+        bottom: 0;
+        left: 0;
+        right: 5rem;
+        padding: 5rem;
+        margin: 0;
+        transition: .5s ease-in-out;
+        overflow: hidden;
+
+        &:hover {
+            background-color: $primary;
+            bottom: 0;
+            left: -2rem;
+            right: 2rem;
+        }
+    }
+
+    &__title {
+        color: $linkcolor;
+    }
+
+    &__subtitle {
+        color: $linkcolor;
+        margin-bottom: 2rem;
+    }
+
+}
+
+.image {
+    width: 100%;
+
+}
+
+.imagebox {
+   @extend .bg-image;
+    min-height: 55rem;
+    border-radius: 1.2rem;
+
+    &__left {
+        background-image: url(../img/home-myownphotostory1.jpeg);
+        @extend .bg-image;
+    }
+
+    &__right {
+        background-image: url(../img/home-myownphotostory2.jpeg);
+        @extend .bg-image;
+    }
+
+}
+
+
+/////////// presets wraper //////////////
+
+.wrapper {
+    &__item {
+        line-height: $text-line-height;
+
+        &::before {
+            content: url('../img/check.svg');
+            display: inline-block;
+            width: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+    &--bg {
+        background-color: $baseheading;
+        .heading__left__title {
+            color: $linkcolor;
+        }
+    }
+
+    &__content {
+        color: $linkcolor;
+    }
+
+
+
+.image {
+    min-height: 50rem;
+    border-radius: 1.2rem;
+    transition: .5s ease-in-out;
+
+    &:hover {
+        transform: translateY(-1rem);
+    }
+
+    @include mq(s) {
+        min-height: 30rem;
+
+    }
+
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+
+}
+.column--2{
+    @include mq(ml) {
+        grid-column: 1/-1;
+    }
+}
+}
+
+///////////newsletter form //////////////
+
+.inner__container {
+    background-image: $gradient, url(../img/newsletter.jpg);
+    @extend .bg-image;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    padding: 3rem 10rem;
+    border-radius: 1.2rem;
+    margin: 4rem 0;
+
+    &__title {
+        color: $linkcolor;
+        margin: 1rem 0 3rem 0;
+        text-align: center;
+
+    }
+    @include mq(m) {
+        padding: 0 3rem;
+    }
+
+    @include mq(s) {
+        padding: 0 3rem;
+    }
+
+}
+
+.webform {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__item {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        border-radius: .4rem;
+        margin-bottom: 2rem;
+
+        @include mq(s) {
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=submit] {
+        width: 100%;
+        padding: 1rem 1.3rem;
+        border-radius: 0.4rem;
+        border-style: none;
+        border: .1rem solid $primary;
+        outline: none;
+
+        @include mq(s) {
+            align-items: center;
+        }
+
+    }
+
+    input[type=text],
+    input[type=email] {
+
+        font-size: 1.4rem;
+    }
+
+    ::placeholder {
+        font-size: 1.4rem;
+    }
+
+    input[type=submit] {
+
+        background-color: $primary;
+        color: $linkcolor;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+}
+
+.checkbox {
+    display: flex;
+    gap: .5rem;
+    &__content {
+        font-size: 1.2rem;
+        flex-basis: 97%;
+        color: $linkcolor;
+
+    }
+}
+
+
+/////////// footer //////////////
+
+
+.footer {
+    background-color: $baseheading;
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 128rem;
+        margin-bottom: 2rem;
+
+    }
+
+    &__heading,
+    &__svg {
+        color: $linkcolor;
+        display: inline-block;
+    }
+
+    &__post__heading, a{
+        color: $linkcolor;
+        font-weight: 400;
+        font-size: 1.5rem;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    &__post {
+        display: flex;
+        margin: 3rem 0;
+
+        @include mq(ml) {
+            margin: 1rem 0;
+        }
+
+    }
+
+    &__img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+
+    &__post__img {
+        margin-right: 2rem;
+    }
+
+    &__copyright {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3rem 0;
+
+        a {
+            color: $iconopacity;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+
+
+    }
+
+    &__copyrigt__text {
+        color: $iconopacity;
+
+        @include mq(m) {
+            text-align: center;
+            order: 2;
+        }
+    }
+
+}
+
+
+.footer_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    opacity: .5;
+    border: .2rem solid $bgcard;
+    font-weight: 400;
+    transition: all .3s ease-in;
+
+
+    &:hover {
+        color: $bgcard;
+        background-color: $primary;
+        opacity: 1;
+        border: none;
+    }
+
+    &::before {
+        content: '';
+        width: .5rem;
+        height: .5rem;
+        border: .2rem solid $bgcard;
+        border-right: none;
+        border-bottom: none;
+
+    }
+
+    &__left {
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__right {
+        &::before {
+            transform: rotate(135deg);
+        }
+    }
+
+
+}
+
+
+.scroll__to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    z-index: 3;
+    display: none;
+    transition: 1s ease-in-out;
+
+}
+
+.scroll--btn {
+    padding: 1rem;
+    background-color: $primary;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary;
+    }
+
+    .scroll--icon {
+        fill: $linkcolor;
+
+    }
+}
