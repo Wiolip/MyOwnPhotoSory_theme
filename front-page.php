@@ -29,15 +29,15 @@
         <div class="row--3 blog__article" >
 
             <?php
-                $new_query_travel = new WP_Query(
+                $recent_post = new WP_Query(
                     array(
-                        'cat'            => 5,
+                        'posts_type' => 'post',
                         'posts_per_page' => 6
                     )
                 );
 
-                if ($new_query_travel->have_posts()) :
-                while ($new_query_travel->have_posts()) : $new_query_travel->the_post();
+                if ($recent_post->have_posts()) :
+                while ($recent_post->have_posts()) : $recent_post->the_post();
 
             ?>
                 <?php get_template_part('template-parts/content','blog');?>
@@ -142,7 +142,7 @@
             <h2 class="inner__container__title">Zapisz się na newsletter</h2>
 
             <div class="webform">
-                <?php echo do_shortcode('[mailerlite_form form_id=2]'); ?>
+                <?php echo do_shortcode('[mailerlite_form form_id=4]'); ?>
             </div>
         </div>
     </div>
@@ -161,7 +161,9 @@
             <?php
             $new_query_photo = new WP_Query(
                 array(
-                    'cat'            => 4,
+
+                    'post_type' => 'fotografia',
+                    'post_status' => 'publish',
                     'posts_per_page' => 3
                 )
             );

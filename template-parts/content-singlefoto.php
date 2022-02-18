@@ -15,17 +15,14 @@
     <div class="blogpost__hero">
         <h1 class="blogpost__mainheading"><?php wp_title(''); ?></h1>
         <p class="blogpost__excerpt"><?php the_excerpt(); ?></p>
-        <div class="blogpost__meta">
-            <ul class="post__meta">
 
-
+            <ul class="blogpost__meta">
                 <li class="post__categories"> </li>
-
                 <li class="post__date post_date--2"><?php echo get_the_date('d/m/Y');?></li>
                 <li class="post__commentsmeta">
                     <?php comments_popup_link('Brak komentarzy', '1 komentarz', '% Comments'); ?></li>
             </ul>
-        </div>
+
     </div>
 </header>
 

@@ -10,23 +10,37 @@
 
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/content','headerfotografia');?> 
+<?php get_template_part('template-parts/content','headerfotoarchive');?>
 
-<main>
-    <div class="container pt--100 pb--100">
-        <div class="row--3">
 
-            <?php if( have_posts() ): ?>
-            <?php while( have_posts() ): the_post();?>
-                <?php get_template_part('template-parts/content','blog');?>
+<div class="container">
+    <div class="container__blog pt--70">
 
-            <? endwhile;?>
-            <? endif; ?>
+        <?php $info_cat = get_the_category(); ?>
 
-        </div>
-        <div class="pagination pt--100"> <?php pagination(); ?></div>
-     </div>
-</main>
+            <main class="main__blog ">
+                <div class="row--2">
+
+                        <?php if (have_posts()) :
+                        while (have_posts()) : the_post(); ?>
+
+                            <?php get_template_part('template-parts/content','blog');?>
+
+                        <?php endwhile; else :endif; ?>
+
+                </div>
+
+                <div class="pagination pt--100 pb--70">
+                    <?php pagination(); ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </main>
+
+            <aside class="aside">
+                <?php get_sidebar(); ?>
+            </aside>
+    </div>
+</div>
 
 
 <?php get_footer(); ?>

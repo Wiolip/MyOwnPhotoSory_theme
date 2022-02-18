@@ -108,6 +108,7 @@ h4 {
   color: #27292f;
   margin-bottom: 2rem;
   font-weight: 600;
+  line-height: 120%;
 }
 
 h1 {
@@ -399,7 +400,8 @@ nav.sticky {
   background: #f5f5f5;
   border-bottom: 0.1rem solid #ca4c25;
 }
-nav.sticky .nav__link, nav.sticky a {
+nav.sticky .nav__link,
+nav.sticky a {
   color: #27292f;
   display: block;
 }
@@ -473,7 +475,8 @@ nav.sticky .menu-item-has-children > a::after {
   }
 
   .nav {
-    height: 5rem;
+    height: 6rem;
+    border-bottom: 0.1rem solid #ca4c25;
   }
   .nav__list {
     position: fixed;
@@ -488,7 +491,7 @@ nav.sticky .menu-item-has-children > a::after {
     align-items: flex-start;
     background-color: #27292f;
     z-index: 2;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
   .nav__list__item,
 .nav__list li {
@@ -502,6 +505,7 @@ nav.sticky .menu-item-has-children > a::after {
 .nav__list a {
     font-size: 1.6rem;
     color: #fcfcfc;
+    font-size: 2rem;
   }
   .nav__list__link:hover,
 .nav__list a:hover {
@@ -516,7 +520,7 @@ nav.sticky .menu-item-has-children > a::after {
     margin: 0.5rem;
     font-size: 2rem;
     position: absolute;
-    top: 0.5rem;
+    top: 1rem;
     right: 1rem;
     color: #ca4c25;
     background-color: #fcfcfc;
@@ -527,6 +531,12 @@ nav.sticky .menu-item-has-children > a::after {
   }
   .nav .menu-btn {
     display: block;
+  }
+  .nav .cancel-btn .fas {
+    display: block;
+    color: #ca4c25;
+    z-index: 11;
+    padding: 0.5rem 1rem;
   }
 
   .menu-item-has-children > a::after {
@@ -548,10 +558,12 @@ nav.sticky .menu-item-has-children > a::after {
     width: 3rem;
     height: 3rem;
   }
-  nav.sticky .nav__list__link, nav.sticky a {
+  nav.sticky .nav__list__link,
+nav.sticky a {
     color: #fcfcfc;
   }
-  nav.sticky .nav__list__link:hover, nav.sticky a:hover {
+  nav.sticky .nav__list__link:hover,
+nav.sticky a:hover {
     color: #ef7059;
   }
   nav.sticky li a {
@@ -565,7 +577,7 @@ nav.sticky .menu-item-has-children > a::after {
     position: relative;
     top: 2rem;
     margin-bottom: 1rem;
-    max-width: 15rem;
+    max-width: 20rem;
   }
   nav.sticky .sub-menu li a {
     color: #27292f;
@@ -573,8 +585,8 @@ nav.sticky .menu-item-has-children > a::after {
   nav.sticky .depth_1 {
     position: absolute;
     top: 1rem;
-    left: 14rem;
-    max-width: 15rem;
+    left: 19rem;
+    max-width: 20rem;
   }
   nav.sticky .depth_1__item {
     padding: 0.5rem;
@@ -584,7 +596,7 @@ nav.sticky .menu-item-has-children > a::after {
     position: relative;
     top: 2rem;
     margin-bottom: 1rem;
-    max-width: 15rem;
+    max-width: 20rem;
   }
   .sub-menu li a {
     color: #27292f;
@@ -593,8 +605,8 @@ nav.sticky .menu-item-has-children > a::after {
   .depth_1 {
     position: absolute;
     top: 1rem;
-    left: 14rem;
-    max-width: 15rem;
+    left: 19rem;
+    max-width: 20rem;
   }
   .depth_1__item {
     padding: 0.5rem;
@@ -716,12 +728,13 @@ nav.sticky .menu-item-has-children > a::after {
 
 .blog__hero {
   width: 100%;
-  height: 40rem;
+  height: 40vh;
   padding-top: 15rem;
   display: flex;
   justify-content: center;
   align-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .blog__meta {
@@ -765,9 +778,9 @@ nav.sticky .menu-item-has-children > a::after {
   text-align: center;
   margin-top: 4rem;
 }
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .page__title {
-    font-size: 5.5rem;
+    font-size: 6rem;
   }
 }
 .page__title::after {
@@ -782,11 +795,16 @@ nav.sticky .menu-item-has-children > a::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(5rem, 15vw, 15rem);
+  font-size: clamp(10rem, 15vw, 15rem);
   font-weight: 800;
   line-height: 1;
   color: #f5f5f5;
   text-shadow: -1px 0 rgba(200, 38, 2, 0.2), 0 1px rgba(200, 38, 2, 0.2), 1px 0 rgba(200, 38, 2, 0.2), 0 -1px rgba(200, 38, 2, 0.2);
+}
+@media (max-width: 560px) {
+  .page__title::after {
+    display: none;
+  }
 }
 
 .pagination {
@@ -989,6 +1007,12 @@ aside {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .blogpost {
+    padding: 0 1.5rem;
+    height: 60rem;
+  }
+}
 .blogpost__hero {
   max-width: 75rem;
   text-align: center;
@@ -998,12 +1022,18 @@ aside {
   color: #fcfcfc;
   font-size: 3.5rem;
 }
+@media (max-width: 560px) {
+  .blogpost p {
+    display: none;
+  }
+}
 .blogpost__meta {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  gap: 0.5rem;
 }
 .blogpost__meta .post__commentsmeta a {
   color: #fcfcfc;
@@ -1046,14 +1076,19 @@ aside {
   color: #ca4c25;
 }
 .blog__container--narrow p,
-.blog__container--narrow ul {
+.blog__container--narrow ul, .blog__container--narrow ol {
   max-width: 75rem;
   margin: 0 auto 2rem;
 }
+.blog__container--narrow ul, .blog__container--narrow ol {
+  padding-left: 1.5rem;
+}
 .blog__container--narrow h2 {
+  max-width: 75rem;
   margin: 3rem auto;
 }
 .blog__container--narrow li {
+  max-width: 75rem;
   list-style: circle;
   line-height: 170%;
 }

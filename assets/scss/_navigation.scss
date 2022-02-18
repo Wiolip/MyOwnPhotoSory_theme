@@ -176,7 +176,8 @@ nav.sticky {
     background: $bgcolor;
     border-bottom: .1rem solid $primary;
 
-    .nav__link, a {
+    .nav__link,
+    a {
         color: $baseheading;
         display: block;
     }
@@ -281,7 +282,8 @@ nav.sticky {
     }
 
     .nav {
-        height: 5rem;
+        height: 6rem;
+        border-bottom: .1rem solid $primary;
 
         &__list {
             position: fixed;
@@ -296,11 +298,13 @@ nav.sticky {
             align-items: flex-start;
             background-color: $bgpanel1;
             z-index: 2;
-            transition: 1s ease-in-out;
+            transition: .5s ease-in-out;
 
             &__item,
             li {
                 display: block;
+
+
 
                 &::after {
                     display: none;
@@ -311,6 +315,7 @@ nav.sticky {
             a {
                 font-size: 1.6rem;
                 color: $linkcolor;
+                font-size: 2rem;
 
                 &:hover {
                     color: $secondary;
@@ -329,7 +334,7 @@ nav.sticky {
             margin: .5rem;
             font-size: 2rem;
             position: absolute;
-            top: .5rem;
+            top: 1rem;
             right: 1rem;
             color: $primary;
             background-color: $linkcolor;
@@ -343,7 +348,15 @@ nav.sticky {
         .menu-btn {
             display: block;
         }
+
+        .cancel-btn .fas{
+            display: block;
+            color: $primary;
+            z-index: 11;
+            padding: .5rem 1rem;
+        }
     }
+
 
     .menu-item-has-children>a::after {
         content: "\f078";
@@ -371,7 +384,8 @@ nav.sticky {
             height: 3rem;
         }
 
-        .nav__list__link, a {
+        .nav__list__link,
+        a {
             color: $linkcolor;
 
             &:hover {
@@ -393,8 +407,9 @@ nav.sticky {
             position: relative;
             top: 2rem;
             margin-bottom: 1rem;
-            max-width: 15rem;
-            li a{
+            max-width: 20rem;
+
+            li a {
                 color: $baseheading;
             }
 
@@ -403,8 +418,8 @@ nav.sticky {
         .depth_1 {
             position: absolute;
             top: 1rem;
-            left: 14rem;
-            max-width: 15rem;
+            left: 19rem;
+            max-width: 20rem;
 
             &__item {
                 padding: .5rem;
@@ -419,8 +434,9 @@ nav.sticky {
         position: relative;
         top: 2rem;
         margin-bottom: 1rem;
-        max-width: 15rem;
-        li a{
+        max-width: 20rem;
+
+        li a {
             color: $baseheading;
         }
 
@@ -429,8 +445,8 @@ nav.sticky {
     .depth_1 {
         position: absolute;
         top: 1rem;
-        left: 14rem;
-        max-width: 15rem;
+        left: 19rem;
+        max-width: 20rem;
 
         &__item {
             padding: .5rem;

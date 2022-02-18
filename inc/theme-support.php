@@ -54,6 +54,7 @@ function mops_menus(){
         'primary' => 'Primary',
         'footer' => 'Footer',
         'mobile' => 'Mobile'
+
         );
     register_nav_menus($locations);
     }
@@ -225,30 +226,13 @@ function mops_get_post_navigation(){
 }
 
 
+function get_page_id_by_title($title)
+{
+$page = get_page_by_title($title);
+return $page->ID;
+}
 
-// function get_the_terms( $post, $taxonomy ) {
-//     $post = get_post( $post );
-//     if ( ! $post ) {
-//         return false;
-//     }
 
-//     $terms = get_object_term_cache( $post->ID, $taxonomy );
-//     if ( false === $terms ) {
-//         $terms = wp_get_object_terms( $post->ID, $taxonomy );
-//         if ( ! is_wp_error( $terms ) ) {
-//             $term_ids = wp_list_pluck( $terms, 'term_id' );
-//             wp_cache_add( $post->ID, $term_ids, $taxonomy . 'foto' );
-//         }
-//     }
-
-//     $terms = apply_filters( 'get_the_terms', $terms, $post->ID, $taxonomy );
-
-//     if ( empty( $terms ) ) {
-//         return false;
-//     }
-
-//     return $terms;
-// }
 
 
 

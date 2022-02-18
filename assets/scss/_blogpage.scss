@@ -137,12 +137,14 @@
 
 .blog__hero {
     width: 100%;
-    height: 40rem;
+    height: 40vh;
     padding-top: 15rem;
     display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
+overflow: hidden;
+
 
 }
 
@@ -191,8 +193,10 @@
     text-align: center;
     margin-top: 4rem;
 
-    @include mq(s) {
-        font-size: 5.5rem;
+
+
+    @include mq(m) {
+        font-size: 6rem;
     }
 
 
@@ -208,11 +212,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(5rem, 15vw, 15rem);
+        font-size: clamp(10rem, 15vw, 15rem);
         font-weight: 800;
         line-height: 1;
         color: $bgcolor;
         text-shadow: $textshadows;
+
+        @include mq(s) {
+            display: none;
+        }
+
     }
 }
 
@@ -463,6 +472,10 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include mq(m) {
+        padding: 0 1.5rem;
+        height: 60rem;
+    }
 
     &__hero {
         max-width: 75rem;
@@ -475,12 +488,19 @@ aside {
         font-size: $h2;
     }
 
+    p {
+        @include mq(s) {
+            display: none;
+        }
+    }
+
     &__meta {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
+        gap: .5rem;
 
         .post__commentsmeta a {
             color: $linkcolor;
@@ -524,19 +544,24 @@ aside {
     @include linx($primary, $secondary, $secondary, $primary);
 
     p,
-    ul {
+    ul, ol {
         max-width: 75rem;
         margin: 0 auto 2rem;
     }
+    ul,ol{
+        padding-left: 1.5rem;
+    }
 
     h2 {
-
+        max-width: 75rem;
         margin: 3rem auto;
     }
 
     li {
+        max-width: 75rem;
         list-style: circle;
         line-height: $text-line-height;
+
 
     }
 
@@ -802,8 +827,8 @@ aside {
 }
 
 .comment {
-    &-title{
-margin-top: 10rem;
+    &-title {
+        margin-top: 10rem;
     }
 
     &-list {

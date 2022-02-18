@@ -46,7 +46,6 @@
                   'menu_class' => 'nav__list',
                   'walker' => new Walker_Nav_Primary
 
-
                     ) );
                 ?>
             </div>
