@@ -21,25 +21,25 @@
         <div class="row--3">
 
 
-        <?php
-            $new_query_photo = new WP_Query(
-                array(
+            <?php
+                $new_query_photo = new WP_Query(
+                    array(
 
-                    'post_type' => 'fotografia',
-                    'post_status' => 'publish',
-                )
-            );
+                        'post_type' => 'fotografia',
+                        'post_status' => 'publish',
+                    )
+                );
 
-            if ($new_query_photo->have_posts()) :
-                while ($new_query_photo->have_posts()) : $new_query_photo->the_post();
-            ?>
-                    <?php get_template_part('template-parts/content','blog');?>
+                if ($new_query_photo->have_posts()) :
+                    while ($new_query_photo->have_posts()) : $new_query_photo->the_post();
+                ?>
+                        <?php get_template_part('template-parts/content','blog');?>
 
-            <?php endwhile;
-                wp_reset_postdata();
-            else :
+                <?php endwhile;
+                    wp_reset_postdata();
+                else :
 
-                endif;
+                    endif;
             ?>
         </div>
 

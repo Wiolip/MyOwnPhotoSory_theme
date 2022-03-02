@@ -1,20 +1,22 @@
+
 <?php
     /*
-        This is the template for custom archive
+        This is the template for custom taxonomy
         @pckage mops
     */
 
 ?>
 
+
 <?php get_header(); ?>
 
-<?php get_template_part('template-parts/content','headerfotografia');?>
+<?php get_template_part('template-parts/content','headerfototaxonomy');?>
 
 
 <div class="container">
     <div class="container__blog pt--70">
 
-        <?php $info_cat = get_the_category(); ?>
+       
 
             <main class="main__blog ">
                 <div class="row--2">
@@ -39,7 +41,6 @@
             </aside>
     </div>
 </div>
-
 
 
 <?php get_footer(); ?>

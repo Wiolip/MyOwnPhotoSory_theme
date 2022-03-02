@@ -18,7 +18,7 @@
         </div>
         <div class="article__content">
             <h4 class="article__title"> <a href="<?php the_permalink(); ?>" class="article__title__link"><?php the_title(); ?></a></h4>
-            <p class="article__excerpt"><?php the_excerpt(''); ?> </p>
+           
         </div>
     </div>
 </article>

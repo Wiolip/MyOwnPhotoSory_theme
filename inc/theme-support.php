@@ -13,14 +13,14 @@ if ( ! isset( $content_width ) )
 
 function mops_theme_support(){
 
-    add_theme_support('title-tag');    // add dynamic title tag support - custom panel
+    add_theme_support('title-tag');
     add_theme_support('custom-logo' );
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
     add_theme_support('widgets');
     add_theme_support('post-formats', array('gallery'));
     add_theme_support( 'align-wide' );
-    add_theme_support( 'title-tag' );
+
 
         // Custom Image Sizes
     add_image_size('blog-large', 1920, 1000, array('center','center'));
@@ -190,7 +190,7 @@ function tag_clouds(){
 // share icon single blogpost
 
 function mops_share_this(){
-
+    
     $output .= '<h4>Czy wiesz, że wysyłając ten artykuł dalej pomagasz mi tworzyć kolejne treści?</h4>';
 
     $title = get_the_title();

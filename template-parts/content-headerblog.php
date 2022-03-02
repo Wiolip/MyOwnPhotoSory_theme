@@ -20,11 +20,6 @@
             <a href="<?php wp_title(''); ?>" class="breadcrumbs__item"><?php wp_title(''); ?></a>
         </nav>
         <h1 class="page__title" title="<?php wp_title(''); ?>"><?php wp_title(''); ?></h1>
-        <div class="blog__meta">
-            <a class="blog__meta__item" href="">All</a>
-            <a class="blog__meta__item" href="archive.html">Podróże</a>
-            <a class="blog__meta__item" href="">Fotografia</a>
-
-        </div>
+       
     </div>
 </header>
