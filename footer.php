@@ -18,8 +18,8 @@
                 </svg>
             </div>
             <div class="footer_arrow" data-page="1">
-                <span class="arrow arrow__left"> </span>
-                <span class="arrow arrow__right"> </span>
+                <span class="arrow arrow__left"> <?php next_posts_link() ?></span>
+                <span class="arrow arrow__right"><?php previous_posts_link() ?></span>
             </div>
         </div>
 

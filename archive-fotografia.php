@@ -22,7 +22,7 @@
                         <?php if (have_posts()) :
                         while (have_posts()) : the_post(); ?>
 
-                            <?php get_template_part('template-parts/content','blog');?>
+                            <?php get_template_part('template-parts/content','foto');?>
 
                         <?php endwhile; else :endif; ?>
 

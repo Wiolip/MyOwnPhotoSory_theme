@@ -68,8 +68,9 @@ li {
         font-size: $h1;
         font-weight: 700;
         color: $linkcolor;
+
         @include mq(s) {
-           font-size: 5.5rem;
+            font-size: 5.5rem;
         }
     }
 
@@ -89,12 +90,13 @@ li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60rem;
+
     @include mq(s) {
         background-size: contain;
         background-position: top;
         padding: 3rem 0;
 
-     }
+    }
 }
 
 
@@ -156,7 +158,7 @@ li {
 }
 
 .imagebox {
-   @extend .bg-image;
+    @extend .bg-image;
     min-height: 55rem;
     border-radius: 1.2rem;
 
@@ -189,6 +191,7 @@ li {
 
     &--bg {
         background-color: $baseheading;
+
         .heading__left__title {
             color: $linkcolor;
         }
@@ -200,36 +203,37 @@ li {
 
 
 
-.image {
-    min-height: 50rem;
-    border-radius: 1.2rem;
-    transition: .5s ease-in-out;
+    .image {
+        min-height: 50rem;
+        border-radius: 1.2rem;
+        transition: .5s ease-in-out;
 
-    &:hover {
-        transform: translateY(-1rem);
+        &:hover {
+            transform: translateY(-1rem);
+        }
+
+        @include mq(s) {
+            min-height: 30rem;
+
+        }
+
     }
 
-    @include mq(s) {
-        min-height: 30rem;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
 
     }
 
-}
-
-
-.column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
-
-}
-.column--2{
-    @include mq(ml) {
-        grid-column: 1/-1;
+    .column--2 {
+        @include mq(ml) {
+            grid-column: 1/-1;
+        }
     }
-}
 }
 
 ///////////newsletter form //////////////
@@ -253,6 +257,7 @@ li {
         text-align: center;
 
     }
+
     @include mq(m) {
         padding: 0 3rem;
     }
@@ -328,6 +333,7 @@ li {
 .checkbox {
     display: flex;
     gap: .5rem;
+
     &__content {
         font-size: 1.2rem;
         flex-basis: 97%;
@@ -359,17 +365,6 @@ li {
         display: inline-block;
     }
 
-    &__post__heading, a{
-        color: $linkcolor;
-        font-weight: 400;
-        font-size: 1.5rem;
-        transition: .3s ease-in-out;
-
-        &:hover {
-            color: $secondary;
-        }
-    }
-
     &__post {
         display: flex;
         margin: 3rem 0;
@@ -380,15 +375,33 @@ li {
 
     }
 
-    &__img {
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
+    &__post__heading {
+        color: $linkcolor;
+        font-weight: 400;
+        font-size: 1.5rem;
+        transition: .3s ease-in-out;
+        margin-left: 2rem;
+        margin-bottom: 0;
+
+        a {
+            color: $linkcolor;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
     }
 
-    &__post__img {
-        margin-right: 2rem;
+    &__img {
+        max-width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+
     }
+
+
+
+
 
     &__copyright {
         display: flex;

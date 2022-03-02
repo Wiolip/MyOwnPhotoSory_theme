@@ -80,7 +80,7 @@
         <div class="inner__container">
             <h2 class="inner__container__title">Zapisz się na newsletter</h2>
             <div class="webform">
-                <?php echo do_shortcode('[mailerlite_form form_id=2]'); ?>
+                <?php echo do_shortcode('[mailerlite_form form_id=4]'); ?>
             </div>
         </div>
     </div>

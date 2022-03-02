@@ -17,7 +17,7 @@
         <p class="blogpost__excerpt"><?php the_excerpt(); ?></p>
 
             <ul class="blogpost__meta">
-                <li class="post__categories"> </li>
+                <li class="post__categories"><?php echo get_the_term_list( $post->ID, 'foto' ); ?> </li>
                 <li class="post__date post_date--2"><?php echo get_the_date('d/m/Y');?></li>
                 <li class="post__commentsmeta">
                     <?php comments_popup_link('Brak komentarzy', '1 komentarz', '% Comments'); ?></li>
