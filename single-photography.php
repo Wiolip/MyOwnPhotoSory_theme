@@ -1,16 +1,15 @@
 <?php
     /*
-        This is the  template for custom post types
-        @package mops
+        This is the custom template for custom post type fotografia
+        @pckage mops
+
     */
 
 ?>
 
 <?php get_header(); ?>
 
-
-
-    <?php if( have_posts() ): ?>
+<?php if( have_posts() ): ?>
     <?php while( have_posts() ): the_post();?>
         <?php get_template_part('template-parts/content','singlefoto');?>
 
@@ -27,4 +26,7 @@
 
 
 
+
+
 <?php get_footer(); ?>
+

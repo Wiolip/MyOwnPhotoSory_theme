@@ -21,7 +21,9 @@
                 class="breadcrumbs__item"><?php wp_title(''); ?></a>
 
         </nav>
-        <h1 class="page__title" title="<?php post_type_archive_title();?>"><?php post_type_archive_title();?></h1>
+        <h1 class="page__title" title="<?php wp_title(''); ?>"><?php wp_title(''); ?></h1>
+
+        <!-- <h1 class="page__title" title="<?php post_type_archive_title();?>"><?php post_type_archive_title();?></h1> -->
 
     </div>
 </header>

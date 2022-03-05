@@ -1,7 +1,7 @@
 
 <?php
     /*
-        Template Name: Fotografia
+        Template Name: Fotografi
 
         This is the custom template for custom post type page
         @pckage mops
@@ -25,7 +25,7 @@
                 $new_query_photo = new WP_Query(
                     array(
 
-                        'post_type' => 'fotografia',
+                        'post_type' => 'photography',
                         'post_status' => 'publish',
                     )
                 );
@@ -33,7 +33,7 @@
                 if ($new_query_photo->have_posts()) :
                     while ($new_query_photo->have_posts()) : $new_query_photo->the_post();
                 ?>
-                        <?php get_template_part('template-parts/content','blog');?>
+                        <?php get_template_part('template-parts/content','foto');?>
 
                 <?php endwhile;
                     wp_reset_postdata();

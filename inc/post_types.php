@@ -13,8 +13,8 @@
  function mops_init_post_type(){
 
         $labels = array(
-            'name' => 'Fotografia',
-            'singular_name' => 'Fotografia',
+            'name' => 'Photography',
+            'singular_name' => 'Photography',
             'all_items' => 'Wszystkie wpisy foto',
             'add_new' => 'Dodaj nowy wpis',
             'add_new_item' => 'Dodaj nowy wpis',
@@ -35,7 +35,7 @@
             'has_archive' => true,
             'publicly_queryable' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'fotografia' ),
+            'rewrite' => array( 'slug' => 'photography' ),
             'capability_type' => 'post',
             'hierarchical' => false, /* nie ma hierarchii jak strony */
             'supports' => array(
@@ -45,13 +45,13 @@
             'menu_position' => 5, /* pozycja w kokpicie em */
             'show_ui' => true,  /* elementy w kokpit*/
             'menu_icon' => 'dashicons-camera',
-            // 'show_in_rest' => true
+            'show_in_rest' => true
 
 
 
         );
 
-     register_post_type('fotografia', $args);
+     register_post_type('photography', $args);
     }
     add_action('init', 'mops_init_post_type');
 
@@ -64,17 +64,17 @@
 
 
         $labels = array(
-            'name' => 'Foto',
-            'singular_name' => 'Foto',
-            'search_items' => 'Szukaj foto',
-            'all_items' => 'Wszystkie foto',
-            'parent_item' => 'Parent foto',
-            'parent_item_colon' => 'Parent foto:',
+            'name' => 'Kategorie',
+            'singular_name' => 'Kategoria',
+            'search_items' => 'Szukaj kategorii',
+            'all_items' => 'Wszystkie kategorie',
+            'parent_item' => 'Parent kategoria',
+            'parent_item_colon' => 'Parent kategoria:',
             'edit_item' => 'Edytuj kategorie',
-            'update_item' => 'Aktualizuj foto',
-            'add_new_item' => 'Dodaj nową foto',
-            'new_item_name' => 'Nowa foto',
-            'menu_name' => 'Foto'
+            'update_item' => 'Aktualizuj kategorie',
+            'add_new_item' => 'Dodaj nową kategorie',
+            'new_item_name' => 'Nowa kategoria',
+            'menu_name' => 'Kategorie'
         );
 
         $args = array(
@@ -85,16 +85,14 @@
             'show_ui' => true,
             'show_admin_column' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'foto' )
+            'rewrite' => array( 'slug' => 'kategoria' )
         );
 
-        register_taxonomy('foto', array('fotografia'), $args);
+        register_taxonomy('kategoria', array('photography'), $args);
 
     }
 
     add_action( 'init' , 'mops_custom_taxonomies' );
-
-
 
 
 

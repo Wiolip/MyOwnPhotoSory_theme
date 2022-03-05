@@ -1,7 +1,7 @@
 
 <?php
     /*
-        This is the template part single blogpost
+        This is the template part single cystom post type photography
         @package mops
     */
 
@@ -17,7 +17,7 @@
         <p class="blogpost__excerpt"><?php the_excerpt(); ?></p>
 
             <ul class="blogpost__meta">
-                <li class="post__categories"><?php echo get_the_term_list( $post->ID, 'foto' ); ?> </li>
+                <li class="post__categories"><?php get_the_term_list( $post->ID, 'kategoria', '', ' ', ''); ?></li>
                 <li class="post__date post_date--2"><?php echo get_the_date('d/m/Y');?></li>
                 <li class="post__commentsmeta">
                     <?php comments_popup_link('Brak komentarzy', '1 komentarz', '% Comments'); ?></li>
@@ -35,6 +35,7 @@
 
         <div class="blog__container pt--50">
             <?php echo tag_clouds(); ?>
+            <?php get_the_term_list( $post->ID, 'kategoria'); ?>
 
             <section class="share__icons">
                 <?php echo mops_share_this(); ?>
@@ -51,7 +52,7 @@
         <div class="container pt--100 pb--70">
 
             <?php get_template_part('template-parts/mops','relatedpost');?>
-
+            
         </div>
     </section>
 

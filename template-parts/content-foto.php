@@ -1,7 +1,7 @@
 
 <?php
     /*
-        This is the template part for blogpost page =>home
+        This is the template part for cystom post type ==>photography
         @package mops
     */
 
@@ -13,7 +13,7 @@
     </div>
     <div class="article__items">
         <div class="post__meta">
-            <li class="post__categories"><?php echo get_the_term_list( $post->ID, 'foto' ); ?></li>
+            <li class="post__categories"><?php echo get_the_term_list( $post->ID, 'kategoria' ); ?></li>
             <li class="post__date"><?php echo get_the_date('d/m/Y');?></li>
         </div>
         <div class="article__content">

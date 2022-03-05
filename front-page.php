@@ -162,7 +162,7 @@
             $new_query_photo = new WP_Query(
                 array(
 
-                    'post_type' => 'fotografia',
+                    'post_type' => 'photography',
                     'post_status' => 'publish',
                     'posts_per_page' => 3
                 )
@@ -171,7 +171,7 @@
             if ($new_query_photo->have_posts()) :
                 while ($new_query_photo->have_posts()) : $new_query_photo->the_post();
             ?>
-                    <?php get_template_part('template-parts/content','foto');?>
+             <?php get_template_part('template-parts/content','foto');?>
 
             <?php endwhile;
                 wp_reset_postdata();
@@ -184,7 +184,7 @@
 
         <div class="cta__button">
             <?php
-            $category_id = get_cat_ID( 4 );
+            $category_id = get_cat_ID( 3 );
             $category_link = get_category_link( $category_id );
             ?>
 
