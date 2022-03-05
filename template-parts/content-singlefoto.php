@@ -17,7 +17,7 @@
         <p class="blogpost__excerpt"><?php the_excerpt(); ?></p>
 
             <ul class="blogpost__meta">
-                <li class="post__categories"><?php get_the_term_list( $post->ID, 'kategoria', '', ' ', ''); ?></li>
+            <li class="post__categories"><?php echo get_the_term_list( $post->ID, 'kategoria' ); ?></li>
                 <li class="post__date post_date--2"><?php echo get_the_date('d/m/Y');?></li>
                 <li class="post__commentsmeta">
                     <?php comments_popup_link('Brak komentarzy', '1 komentarz', '% Comments'); ?></li>
@@ -52,7 +52,7 @@
         <div class="container pt--100 pb--70">
 
             <?php get_template_part('template-parts/mops','relatedpost');?>
-            
+
         </div>
     </section>
 

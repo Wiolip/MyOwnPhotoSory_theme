@@ -1,0 +1,130 @@
+.entry-content> :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright) {
+    max-width: $blogcontent-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry-content .alignwide {
+    max-width: $alignwide;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.entry-content {
+
+    p {
+        display: block;
+        margin: 2rem 0;
+        color: $basetext;
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin: 4rem auto 2rem auto;
+    }
+
+    a {
+        color: $primary;
+    }
+
+    ul {
+        display: block;
+        padding-left: 4rem;
+        list-style-type: disc;
+
+    }
+
+    li {
+        display: list-item;
+        margin-bottom: 1rem;
+        line-height: $text-line-height;
+        list-style-type: disc;
+    }
+}
+
+
+.entry__content,
+.has-drop-cap:not(:focus) {
+    &::first-letter {
+        font-size: 10rem;
+        font-weight: 600;
+        float: left;
+        margin: 1rem 0 1rem 1rem 0;
+    }
+}
+
+.wp-block-pullquote {
+    position: relative;
+    display: block;
+    margin: 4rem 0;
+    padding: 2rem 7rem;
+    border: 10px solid lighten($primary, 40);
+
+    &::before {
+        content: '\201D';
+        position: absolute;
+        top: 0;
+        left: 3rem;
+        z-index: -1;
+        color: lighten($primary, 40);
+        font-size: 30rem;
+        line-height: 0;
+        transform: rotate(180deg);
+
+    }
+
+
+
+    p {
+        font-family: Merriweather;
+        font-weight: 700;
+        text-align: left;
+
+    }
+
+    cite {
+        display: block;
+        margin-top: 3rem;
+        text-align: left;
+        font-style: italic;
+        font-weight: 200;
+
+    }
+
+}
+
+
+.wp-block-quote{
+    border-left: .4rem solid $primary;
+    padding-left: 2rem;
+    p{
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+
+.wp-block-separator{
+    opacity: .5;
+}
+
+.wp-block-button__link{
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1.3rem 2.3rem;
+    border-radius: .7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.entry-content .wp-block-button__link{
+    color: $linkcolor;
+   background-color: $primary;
+   &:hover{
+    background-color: $baseheading;
+
+   }
+}

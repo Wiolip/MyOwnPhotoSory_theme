@@ -27,6 +27,8 @@
 
                         'post_type' => 'photography',
                         'post_status' => 'publish',
+                        'posts_per_page' => 12
+
                     )
                 );
 

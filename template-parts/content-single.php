@@ -22,17 +22,18 @@
                 <li class="post__commentsmeta">
                     <?php comments_popup_link('Brak komentarzy', '1 komentarz', '% Comments'); ?></li>
             </ul>
-      
+
     </div>
 </header>
 
-<main>
+<main class=" pt--70">
 
-    <div class="container pt--70">
-        <div class=" blog__container--narrow">
+
+        <div class="entry-content">
              <?php the_content(); ?>
         </div>
 
+        
         <div class="blog__container pt--50">
             <?php echo tag_clouds(); ?>
 
@@ -45,7 +46,7 @@
             </section>
         </div>
 
-    </div>
+
 
     <section class="blogpost__wrapper">
         <div class="container pt--100 pb--70">
