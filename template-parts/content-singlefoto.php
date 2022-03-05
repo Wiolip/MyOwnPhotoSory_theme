@@ -26,10 +26,10 @@
     </div>
 </header>
 
-<main>
+<main class="pt--70">
 
-    <div class="container pt--70">
-        <div class=" blog__container--narrow">
+    
+        <div class="entry-content">
              <?php the_content(); ?>
         </div>
 
@@ -46,7 +46,7 @@
             </section>
         </div>
 
-    </div>
+
 
     <section class="blogpost__wrapper">
         <div class="container pt--100 pb--70">
