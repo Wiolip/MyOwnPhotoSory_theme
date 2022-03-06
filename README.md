@@ -1,10 +1,9 @@
+# WordPress Custom Theme for travel blogger
 
-WordPress Custom Theme for travel blogger
+# I used:
 
-I used:
-
-HTML5
-CSS3 /flexbox/grid/
-SASS
-BEM
-JS
+-HTML5 
+-CSS3: flexbox, grid
+-SASS 
+-BEM 
+-JS
