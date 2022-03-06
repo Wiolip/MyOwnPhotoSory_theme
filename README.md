@@ -2,8 +2,10 @@
 
 # I used:
 
--HTML5 
--CSS3: flexbox, grid
--SASS 
--BEM 
+-HTML
+-CSS3 /FLEXBOX, GRID /
+-SASS
+-BEM
 -JS
+
+
