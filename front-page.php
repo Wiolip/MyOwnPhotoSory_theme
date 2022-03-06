@@ -183,12 +183,9 @@
 
 
         <div class="cta__button">
-            <?php
-            $category_id = get_cat_ID( 3 );
-            $category_link = get_category_link( $category_id );
-            ?>
+            
 
-            <a href="/index.php?cat=4" ><buttonn class="btn btn--solid">Zobacz wszytskie wpisy foto</buttonn></a>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Fotografia' ) ) ); ?>" ><buttonn class="btn btn--solid">Zobacz wszytskie wpisy foto</buttonn></a>
         </div>
 
     </div>
