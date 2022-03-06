@@ -7,7 +7,16 @@
 */
 
 if ( ! isset( $content_width ) )
-    $content_width = 750;
+    $content_width = 800;
+
+// width for blog posts
+
+// function mops_content_width() {
+
+// 	$GLOBALS['content_width'] = apply_filters( 'mops_content_width', 800 );
+// }
+// add_action( 'after_setup_theme', 'mops_content_width', 0 );
+
 
 // add functionality to admin panel
 
@@ -171,13 +180,7 @@ function pagination() {
 
 
 
-// width for blog posts
 
-function mops_content_width() {
-
-	$GLOBALS['content_width'] = apply_filters( 'mops_content_width', 750 );
-}
-add_action( 'after_setup_theme', 'mops_content_width', 0 );
 
 
 
@@ -190,7 +193,7 @@ function tag_clouds(){
 // share icon single blogpost
 
 function mops_share_this(){
-    
+
     $output .= '<h4>Czy wiesz, że wysyłając ten artykuł dalej pomagasz mi tworzyć kolejne treści?</h4>';
 
     $title = get_the_title();
@@ -226,8 +229,7 @@ function mops_get_post_navigation(){
 }
 
 
-function get_page_id_by_title($title)
-{
+function get_page_id_by_title($title) {
 $page = get_page_by_title($title);
 return $page->ID;
 }

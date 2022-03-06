@@ -30,7 +30,7 @@
 
                 <div class="pagination pt--100 pb--70">
                     <?php pagination(); ?>
-                    <?php wp_reset_postdata(); ?>
+                   
                 </div>
             </main>
 
