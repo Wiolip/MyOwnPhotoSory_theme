@@ -1500,10 +1500,9 @@ aside {
 .entry-content a {
   color: #ca4c25;
 }
-.entry-content ul {
+.entry-content ul, .entry-content ol {
   display: block;
   padding-left: 4rem;
-  list-style-type: disc;
 }
 .entry-content li {
   display: list-item;

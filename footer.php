@@ -8,6 +8,7 @@
 
 <footer id="footer" class="footer">
     <div class="container pt--50">
+
         <div class="footer__block">
             <div class="footer__items">
                 <h4 class="footer__heading">Popularne wpisy</h4>
@@ -18,8 +19,9 @@
                 </svg>
             </div>
             <div class="footer_arrow" data-page="1">
-                <span class="arrow arrow__left"> <?php next_posts_link() ?></span>
-                <span class="arrow arrow__right"><?php previous_posts_link() ?></span>
+
+                <span class="arrow arrow__left"> </span>
+                <span class="arrow arrow__right"></span>
             </div>
         </div>
 
