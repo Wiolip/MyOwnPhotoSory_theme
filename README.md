@@ -2,10 +2,10 @@
 
 # I used:
 
-HTML
-CSS3 /FLEXBOX, GRID /
-SASS
-BEM
-JS
+- HTML
+- CSS3 /FLEXBOX, GRID /
+- SASS
+- BEM
+- JS
 
 
