@@ -27,9 +27,12 @@ add_action('wp_enqueue_scripts','mopsload_css');
 // adds script before body
 function mopsload_js(){
 
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), false, true );
+    wp_enqueue_script('jquery');
 
-    wp_enqueue_script('fontawesome', "https://kit.fontawesome.com/c09818cd34.js" , array(), false, true );
+
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', 'jquery', false, true );
+
+    wp_enqueue_script('fontawesome', "https://kit.fontawesome.com/c09818cd34.js" , 'jquery', false, true );
 
 }
 add_action('wp_enqueue_scripts','mopsload_js');
