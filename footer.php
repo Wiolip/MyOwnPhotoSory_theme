@@ -65,8 +65,8 @@
 
 
 
-
-<?php wp_footer(); ?>
 <script src="assets/js/main.js" type="text/javascript"></script>
+<?php wp_footer(); ?>
+
 </body>
 </html>
