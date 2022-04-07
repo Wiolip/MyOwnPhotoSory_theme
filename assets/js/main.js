@@ -1,76 +1,49 @@
+// sticky navigation
 
-
-    // sticky navigation
-
-    window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle("sticky", window.scrollY > 0)
-    });
-
+window.addEventListener("scroll", function () {
+  const nav = document.querySelector("nav");
+  nav.classList.toggle("sticky", window.scrollY > 0)
+});
 
 
 
+//scroll to top
+
+const mybutton = document.getElementById("myBtn");
+
+window.onscroll = function () {
+  scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
 
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
-
-    // const toggle = document.querySelector(".toggle");
-    // const menu = document.querySelector(".menu");
-
-    // /* Toggle mobile menu */
-    // function toggleMenu() {
-    //     if (menu.classList.contains("active")) {
-    //         menu.classList.remove("active");
-
-    //         // adds the menu (hamburger) icon
-    //         toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
-    //     } else {
-    //         menu.classList.add("active");
-
-    //         // adds the close (x) icon
-    //         toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
-    //     }
-    // }
-
-
-// /* Event Listener */
-// toggle.addEventListener("click", toggleMenu, false);
-
-
-// /* Event Listener */
-// toggle.addEventListener("click", toggleMenu, false);
-
-
-// /* Activate Submenu */
-// const items = document.querySelectorAll(".nav__list__item");
-
-// function toggleItem() {
-//     if (this.classList.contains("submenu-active")) {
-//         this.classList.remove("submenu-active");
-//     } else if (menu.querySelector(".submenu-active")) {
-//         menu.querySelector(".submenu-active").classList.remove("submenu-active");
-//         this.classList.add("submenu-active");
-//     } else {
-//         this.classList.add("submenu-active");
-//     }
-// }
-
-// /* Event Listeners */
-// for (let item of items) {
-//     if (item.querySelector(".submenu")) {
-//         item.addEventListener("click", toggleItem, false);
-
-//     }
-// }
-// /* Close Submenu From Anywhere */
-// function closeSubmenu(e) {
-//     let isClickInside = menu.contains(e.target);
-
-//     if (!isClickInside && menu.querySelector(".submenu-active")) {
-//         menu.querySelector(".submenu-active").classList.remove("submenu-active");
-//     }
-// }
-
-// /* Event listener */
-// document.addEventListener("click", closeSubmenu, false);
+const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
